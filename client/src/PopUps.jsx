@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import { Transition } from "react-transition-group";
-import Draggable from "react-draggable";
 
 export const LogInSignUpWindow = ({ onSignUpClick, onLogInClick, onClose }) => {
   return (
