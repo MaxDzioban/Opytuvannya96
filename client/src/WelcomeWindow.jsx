@@ -49,7 +49,7 @@ export const WelcomeWindow = ({ onClose }) => {
             className="close-button window-control-button"
             onClick={onClose}
           >
-            <img src="/close_window.png" />
+            <img src="/close_window.png" alt="close" />
           </button>
         </div>
       </div>
