@@ -440,7 +440,7 @@ const App = () => {
               }
             }}
           >
-            <img className="start-icon" src="/bomba.png" />
+            <img className="start-icon" src="/bomba.png" alt="bomb"/>
             Start Test
           </button>
         </Link>
