@@ -1,0 +1,17 @@
+{
+  "name": "opytuvannya95",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server/final_server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.18.2",
+    "mongodb": "^6.5.0",
+    "node-fetch": "^3.3.2"
+  }
+}
+
