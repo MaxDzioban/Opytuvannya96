@@ -39,7 +39,7 @@ export const NotepadWindow = ({ title, content, clickHandler }) => {
           <div className="window-header-buttons">
             <Link to="/">
               <button className="close-button window-control-button">
-                <img src="/close_window.png" />
+                <img src="/close_window.png" alt="Close" />
               </button>
             </Link>
           </div>
