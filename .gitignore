@@ -1,0 +1,8 @@
+# .gitignore
+node_modules/
+.env
+client-build/
+dist/
+.DS_Store
+*.log
+
