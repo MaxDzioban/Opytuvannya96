@@ -109,7 +109,7 @@ export const SelectTestWindow = ({ clickHandler, username }) => {
             </option>
           </select>
 
-          <label for="questions-number">Number of Questions :</label>
+          <label htmlFor="questions-number-select">Number of Questions :</label>
           <input
             type="number"
             id="questions-number-select"
