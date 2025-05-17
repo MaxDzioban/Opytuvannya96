@@ -167,6 +167,10 @@ const clientBuildPath = path.join(__dirname, "client-build");
 
 app.use(express.static(clientBuildPath));
 
+app.get("/robots.txt", (req, res) => {
+  res.sendFile(path.join(clientBuildPath, "robots.txt"));
+});
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(clientBuildPath, "index.html"));
 });
