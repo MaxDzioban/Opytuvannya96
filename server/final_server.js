@@ -6,7 +6,6 @@ import { MongoClient, ServerApiVersion } from "mongodb";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import compression from "compression";
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -16,7 +15,6 @@ dotenv.config();
 
 const app = express();
 app.use(cors());
-app.use(compression());
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
