@@ -24,7 +24,7 @@ export const LogInSignUpWindow = ({ onSignUpClick, onLogInClick, onClose }) => {
                   className="close-button window-control-button"
                   onClick={onClose}
                 >
-                  <img src="/close_window.png" />
+                  <img src="/close_window.png" alt="Close" />
                 </button>
         </div>
       </div>
@@ -69,7 +69,7 @@ export const CreateAccountWindow = ({ loginHandler, isLoginMode, onClose }) => {
           className="close-button window-control-button"
           onClick={onClose}
         >
-          <img src="/close_window.png" />
+          <img src="/close_window.png" alt="Close" />
         </button>
         </div>
       </div>
@@ -118,7 +118,7 @@ export const PopUpWindow = ({ isOpen = true, title, text, clickHandler , onClose
                   className="close-button window-control-button"
                   onClick={onClose}
                 >
-                  <img src="/close_window.png" />
+                  <img src="/close_window.png" alt="Close" />
                 </button>
 
               </div>
