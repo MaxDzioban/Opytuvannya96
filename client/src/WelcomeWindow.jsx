@@ -40,7 +40,7 @@ export const WelcomeWindow = ({ onClose }) => {
         <h4 className="window-header-text">Home</h4>
         <div className="window-header-buttons">
           {/* <button className="minimize-button window-control-button">
-            <img src="/min_window.png" />
+            <img src="/min_window.png"/>
           </button>
           <button className="maximize-button window-control-button">
             <img src="/max_window.png" />
@@ -61,7 +61,7 @@ export const WelcomeWindow = ({ onClose }) => {
           </h1>
           <div className="welcome-inner-text">
             <h4 className="small-title">
-              <img src="/info.png" />
+              <img src="/info.png" alt="Information" />
               Did you know...
             </h4>
             <p className="generic-text">
@@ -71,8 +71,8 @@ export const WelcomeWindow = ({ onClose }) => {
           </div>
         </div>
         <div className="welcome-image">
-          <img id="large-dog" src="/dog_reading.png" />
-          <img id="lightbulb" src="/lightbulb.png" />
+          <img id="large-dog" src="/dog_reading.png" alt="Dog reading image" />
+          <img id="lightbulb" src="/lightbulb.png" alt="lightbulble image" />
         </div>
       </div>
     </div>
