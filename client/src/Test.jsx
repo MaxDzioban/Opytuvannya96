@@ -11,7 +11,7 @@ export const SelectTestWindow = ({ clickHandler, username }) => {
   useEffect(() => {
     async function loadAllQuestions() {
       try {
-        const res = await fetch("http://localhost:3000/api/questions");
+        const res = await fetch("/api/questions");
         const data = await res.json();
         const grouped = {};
         data.forEach((q) => {
@@ -277,7 +277,7 @@ export const ResultsWindow = ({ topic, questions, answers, username }) => {
         const question = questions[i];
         const answer = answers[i];
 
-        const res = await fetch("http://localhost:3000/api/evaluate", {
+        const res = await fetch("/api/evaluate", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ question, answer }),
@@ -296,7 +296,7 @@ export const ResultsWindow = ({ topic, questions, answers, username }) => {
       }
 
       if (username) {
-        await fetch("http://localhost:3000/api/points", {
+        await fetch("/api/points", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ username, delta: total }),
