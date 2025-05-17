@@ -81,7 +81,7 @@ export const SelectTestWindow = ({ clickHandler, username }) => {
             </div>
           </div>
           <h2>What will you study today?</h2>
-          <label htmlFor="topic">Topic:</label>
+          <label htmlFor="topic-select">Topic:</label>
           <select
             name="topic"
             id="topic-select"
