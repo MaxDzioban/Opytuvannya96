@@ -663,7 +663,7 @@ button {
 body.bad-score,
 body.settings-mode {
   background: #7d0e0e;
-  background: url("/public/screamers/blood.png") no-repeat center center fixed, linear-gradient(160deg, rgba(125, 14, 14, 1) 46%, rgba(0, 0, 0, 1) 100%);
+  background: url("/blood.png") no-repeat center center fixed, linear-gradient(160deg, rgba(125, 14, 14, 1) 46%, rgba(0, 0, 0, 1) 100%);
   background-size: cover, cover;
 }
 
