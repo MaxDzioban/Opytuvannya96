@@ -648,9 +648,69 @@ button {
 }
 
 
+.fullscreen-overlay,
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 10000;
+}
 
+body.bad-score,
+body.settings-mode {
+  background: #7d0e0e;
+  background: url("/public/screamers/blood.png") no-repeat center center fixed, linear-gradient(160deg, rgba(125, 14, 14, 1) 46%, rgba(0, 0, 0, 1) 100%);
+  background-size: cover, cover;
+}
 
+.results.window {
+  z-index: 10001;
+}
 
+body.settings-mode .timer,
+body.settings-mode .question-list {
+  box-shadow: inset -3px -3px 0px #888, -3px -3px 0 #fff;
+}
+
+.results.window.bad,
+body.settings-mode .window,
+body.settings-mode .welcome-inner-text,
+body.settings-mode .notepad-inner {
+  background-color: #000;
+  color: #fff;
+  box-shadow: inset -3px -3px 0px #888, -3px -3px 0 #fff;
+}
+
+.results.window.bad .window-header,
+body.settings-mode .window-header {
+  background-color: #8B0000;
+}
+
+.results.window.bad .window-header-text {
+  filter: brightness(0) invert(1);
+}
+
+.results.window.bad #responses,
+.results.window.bad #responses th,
+.results.window.bad #responses td {
+  color: #fff;
+  border-color: #444;
+}
+
+body.bad-score .main-page-footer {
+  background-color: #000;
+}
+
+body.bad-score .main-page-footer-start,
+body.settings-mode .main-page-footer-start,
+body.settings-mode .main-page-footer {
+  background-color: #000;
+  color: #fff;
+}
 
 
 select {
@@ -727,18 +787,6 @@ input:focus {
 .scrollable-topic-content li {
   margin-bottom: 8px;
   line-height: 1.4;
-}
-
-
-.blood-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(150, 0, 0, 0.6);
-  z-index: 9999;
-  pointer-events: none;
 }
 
 @keyframes fadeOut {
