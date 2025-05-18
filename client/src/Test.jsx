@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Timer } from "./Timer.jsx";
@@ -265,6 +265,7 @@ export const TestWindow = ({ testName, time, questions, username }) => {
 
 export const ResultsWindow = ({ topic, questions, answers, username }) => {
   const [finalScore, setFinalScore] = useState(0);
+  const warning = useRef(new Audio("/osvitni_vtraty.mp3"));
 
   useEffect(() => {
     async function evaluateAnswersOnce() {
@@ -308,8 +309,24 @@ export const ResultsWindow = ({ topic, questions, answers, username }) => {
     evaluateAnswersOnce();
   }, [questions, answers, username]);
 
+  useEffect(() => {
+    if (finalScore < 0) {
+      warning.current.play().catch(() => {console.log("Error while trying to play audio")});
+
+      document.body.classList.add("bad-score");
+    }
+    else {
+      document.body.classList.remove("bad-score");
+    }
+
+    return () => {
+      document.body.classList.remove("bad-score");
+    };
+  }, [finalScore]);
+
   return (
-    <div className="results window">
+    <>
+      <div className={`results window${finalScore < 0 ? " bad" : ""}`}>
       <div className="window-header">
         <h4 className="window-header-text">Results</h4>
         <div className="window-header-buttons">
@@ -342,5 +359,6 @@ export const ResultsWindow = ({ topic, questions, answers, username }) => {
         <tbody id="responses-body"></tbody>
       </table>
     </div>
+       </>
   );
 };
